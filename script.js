@@ -1,4 +1,4 @@
-function redirectToUPI(app) {
+function redirectToGPay() {
     const amount = document.getElementById("amount").value;
 
     if (!amount || amount <= 0) {
@@ -6,19 +6,20 @@ function redirectToUPI(app) {
         return;
     }
 
-    const upiID = "8904713074@sbi";
-    const name = "SVR Techschool";
-    const currency = "INR";
+    // Google Pay UPI link
+    const upiLink = `upi://pay?pa=8904713074@sbi&pn=SVR%20Techschool&am=${amount}&cu=INR`;
+    window.location.href = upiLink;
+}
 
-    // Create UPI link
-    const upiLink = `upi://pay?pa=${upiID}&pn=${encodeURIComponent(name)}&am=${amount}&cu=${currency}`;
+function redirectToPhonePe() {
+    const amount = document.getElementById("amount").value;
 
-    // Open corresponding UPI app
-    if (app === "gpay") {
-        window.location.href = upiLink;
-    } else if (app === "phonepe") {
-        window.location.href = upiLink;
-    } else {
-        alert("Unsupported payment method.");
+    if (!amount || amount <= 0) {
+        alert("Please enter a valid amount.");
+        return;
     }
+
+    // PhonePe UPI link
+    const upiLink = `upi://pay?pa=8904713074@sbi&pn=SVR%20Techschool&am=${amount}&cu=INR`;
+    window.location.href = upiLink;
 }
