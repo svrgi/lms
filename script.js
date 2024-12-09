@@ -6,7 +6,7 @@ function redirectToUPI(app) {
         return;
     }
 
-    const upiID = "svrtechschool@upi";
+    const upiID = "8904713074@sbi";
     const name = "SVR Techschool";
     const currency = "INR";
 
