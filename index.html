@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SVRTechschool LMS</title>
+    <title>Responsive Navbar</title>
     <style>
         * {
             margin: 0;
@@ -23,38 +23,36 @@
             overflow: hidden;
         }
 
-        /* Neon Line Animation */
-        nav::before {
+        /* Neon Animation */
+        nav::before, nav::after, nav::nth-child(2)::before, nav::nth-child(2)::after {
             content: "";
             position: absolute;
-            width: 100%;
-            height: 2px;
             background: #ff7628;
+        }
+
+        nav::before {
+            height: 2px;
+            width: 0;
             top: 0;
             left: 0;
-            animation: animateNeon 4s linear infinite;
+            animation: neonLine 3s linear infinite;
         }
 
         nav::after {
-            content: "";
-            position: absolute;
             width: 2px;
-            height: 100%;
-            background: #ff7628;
+            height: 0;
             top: 0;
             right: 0;
-            animation: animateNeon 4s linear infinite 1s;
+            animation: neonLine 3s linear infinite 0.75s;
         }
 
-        @keyframes animateNeon {
-            0% { width: 0; height: 2px; }
-            25% { width: 100%; height: 2px; }
-            50% { width: 2px; height: 100%; }
-            75% { width: 100%; height: 2px; right: 0; }
-            100% { height: 100%; }
+        @keyframes neonLine {
+            0%, 100% { width: 0; height: 0; }
+            25% { width: 100%; }
+            50% { width: 100%; height: 100%; }
+            75% { width: 0; height: 100%; }
         }
 
-        /* Navbar Content */
         .navbar-container {
             display: flex;
             justify-content: space-between;
@@ -69,10 +67,10 @@
         }
 
         .menu-btn {
-            display: none;
             font-size: 28px;
             color: white;
             cursor: pointer;
+            display: none;
         }
 
         .nav-links {
