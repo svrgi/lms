@@ -3,20 +3,93 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Secure UPI Payment</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Responsive Navbar</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f4f4f4;
+        }
+
+        nav {
+            background-color: #004570;
+            padding: 15px 20px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        nav::before, nav::after {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            background: #ff7628;
+            animation: animateLine 3s linear infinite;
+        }
+
+        nav::before {
+            top: 0;
+            left: 0;
+        }
+
+        nav::after {
+            bottom: 0;
+            right: 0;
+        }
+
+        .nav-links {
+            display: flex;
+            justify-content: space-around;
+            list-style-type: none;
+        }
+
+        .nav-links li a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            text-transform: uppercase;
+            padding: 8px 15px;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links li a:hover {
+            color: #ff7628;
+        }
+
+        @keyframes animateLine {
+            0% { left: -100%; right: 100%; }
+            50% { left: 0; right: 0; }
+            100% { left: 100%; right: -100%; }
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .nav-links {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .nav-links li {
+                margin: 10px 0;
+            }
+        }
+    </style>
 </head>
 <body>
-    <div class="payment-container">
-        <h2>Pay to SVR Techschool</h2>
-        
-        <label for="amount">Enter Amount (₹):</label>
-        <input type="number" id="amount" min="1" required>
 
-        <button onclick="redirectToUPI('gpay')">Pay with Google Pay</button>
-        <button onclick="redirectToUPI('phonepe')">Pay with PhonePe</button>
-    </div>
+<nav>
+    <ul class="nav-links">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About SVRTechschool</a></li>
+        <li><a href="#">Job Factory</a></li>
+        <li><a href="#">Login</a></li>
+    </ul>
+</nav>
 
-    <script src="script.js"></script>
 </body>
 </html>
