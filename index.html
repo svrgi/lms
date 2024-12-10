@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Responsive Navbar</title>
+    <title>SVRTechschool LMS</title>
     <style>
         * {
             margin: 0;
@@ -18,37 +18,73 @@
 
         nav {
             background-color: #004570;
-            padding: 15px 20px;
+            padding: 10px 20px;
             position: relative;
             overflow: hidden;
         }
 
-        nav::before, nav::after {
+        /* Neon Line Animation */
+        nav::before {
             content: "";
             position: absolute;
             width: 100%;
             height: 2px;
             background: #ff7628;
-            animation: animateLine 3s linear infinite;
-        }
-
-        nav::before {
             top: 0;
             left: 0;
+            animation: animateNeon 4s linear infinite;
         }
 
         nav::after {
-            bottom: 0;
+            content: "";
+            position: absolute;
+            width: 2px;
+            height: 100%;
+            background: #ff7628;
+            top: 0;
             right: 0;
+            animation: animateNeon 4s linear infinite 1s;
+        }
+
+        @keyframes animateNeon {
+            0% { width: 0; height: 2px; }
+            25% { width: 100%; height: 2px; }
+            50% { width: 2px; height: 100%; }
+            75% { width: 100%; height: 2px; right: 0; }
+            100% { height: 100%; }
+        }
+
+        /* Navbar Content */
+        .navbar-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        .menu-btn {
+            display: none;
+            font-size: 28px;
+            color: white;
+            cursor: pointer;
         }
 
         .nav-links {
             display: flex;
-            justify-content: space-around;
             list-style-type: none;
         }
 
-        .nav-links li a {
+        .nav-links li {
+            margin: 0 15px;
+        }
+
+        .nav-links a {
             color: white;
             text-decoration: none;
             font-size: 18px;
@@ -57,21 +93,30 @@
             transition: color 0.3s ease;
         }
 
-        .nav-links li a:hover {
+        .nav-links a:hover {
             color: #ff7628;
         }
 
-        @keyframes animateLine {
-            0% { left: -100%; right: 100%; }
-            50% { left: 0; right: 0; }
-            100% { left: 100%; right: -100%; }
-        }
-
-        /* Mobile Responsive */
+        /* Mobile Styles */
         @media (max-width: 768px) {
+            .menu-btn {
+                display: block;
+            }
+
             .nav-links {
+                display: none;
                 flex-direction: column;
-                text-align: center;
+                width: 100%;
+                text-align: left;
+                position: absolute;
+                top: 60px;
+                left: 0;
+                background: #004570;
+                padding: 10px 20px;
+            }
+
+            .nav-links.active {
+                display: flex;
             }
 
             .nav-links li {
@@ -83,13 +128,24 @@
 <body>
 
 <nav>
-    <ul class="nav-links">
-        <li><a href="#">Home</a></li>
-        <li><a href="#">About SVRTechschool</a></li>
-        <li><a href="#">Job Factory</a></li>
-        <li><a href="#">Login</a></li>
-    </ul>
+    <div class="navbar-container">
+        <div class="logo">SVRTechschool</div>
+        <div class="menu-btn" onclick="toggleMenu()">☰</div>
+        <ul class="nav-links" id="menu">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About SVRTechschool</a></li>
+            <li><a href="#">Job Factory</a></li>
+            <li><a href="#">Login</a></li>
+        </ul>
+    </div>
 </nav>
+
+<script>
+    function toggleMenu() {
+        const menu = document.getElementById("menu");
+        menu.classList.toggle("active");
+    }
+</script>
 
 </body>
 </html>
