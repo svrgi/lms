@@ -89,14 +89,14 @@ nav.navbar::after {
 
 @media (max-width: 768px) {
     .loader {
-        left: 10%; /* Move the loader slightly left on smaller screens */
+        left: 5%; /* Move the loader slightly left on smaller screens */
     }
 }
 
 
 @media (max-width: 480px) {
     .loader {
-        left: 2%; /* Further move left */
+        left: 1%; /* Further move left */
         width: 50px; /* Adjust size if needed */
         height: 50px; /* Adjust size if needed */
     }
