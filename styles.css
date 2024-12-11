@@ -81,7 +81,7 @@ nav.navbar::after {
 
 /* Loader Styles */
 .loader {
-    position: absolute;
+    position: fixed;
     top: 50%;
     left: 35%;
     transform: translateY(-50%); /* Keep it vertically centered */
