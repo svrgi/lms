@@ -1,64 +1,7 @@
- *{
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: Arial, sans-serif;
-        }
-
-        body {
-            background-color: #f4f4f4;
-        }
-
-        /* Navbar Styling */
-        nav.navbar {
-            background-color: #004570;
-            padding: 15px 20px;
-            position: relative;
-            overflow: hidden;
-        }
-
-        /* Neon Line Animation */
-        nav.navbar::before, nav.navbar::after {
-            content: "";
-            position: absolute;
-            width: 100%;
-            height: 2px;
-            background: #ff7628;
-            animation: animateLine 3s linear infinite;
-        }
-
-        nav.navbar::before {
-            top: 0;
-            left: 0;
-        }
-
-        nav.navbar::after {
-            bottom: 0;
-            right: 0;
-        }
-
-        @keyframes animateLine {
-            0% { left: -100%; right: 100%; }
-            50% { left: 0; right: 0; }
-            100% { left: 100%; right: -100%; }
-        }
-
-        /* Navbar Links */
-        .nav-link {
-            color: white !important;
-            font-size: 18px;
-            text-transform: uppercase;
-            padding: 8px 15px;
-            transition: color 0.3s ease;
-        }
-
-        .nav-link:hover {
-            color: #ff7628 !important;
-        }
 
 
 
-{
+.{
     box-sizing: border-box;
     font-family: Arial, sans-serif;
 }
