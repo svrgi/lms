@@ -96,7 +96,7 @@ nav.navbar::after {
 
 @media (max-width: 480px) {
     .loader {
-        left: 10%; /* Further move left */
+        left: 15%; /* Further move left */
         width: 50px; /* Adjust size if needed */
         height: 50px; /* Adjust size if needed */
     }
