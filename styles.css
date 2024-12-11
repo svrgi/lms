@@ -32,18 +32,6 @@ body {
     background-color: #f4f4f4;
 }
 
-.navbar {
-    background-color: #004570;
-}
-
-.navbar-toggler {
-    border-color: white; /* If you want to change the color of the toggler icon */
-}
-
-.navbar-toggler-icon {
-    background-color: white; /* Change the icon color */
-}
-
 
 nav.navbar::before {
     top: 0;
