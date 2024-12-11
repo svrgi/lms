@@ -18,6 +18,13 @@ nav.navbar {
     overflow: hidden;
 }
 
+/* Navbar Toggler Fix */
+.navbar-toggler {
+    position: absolute;
+    top: 10px; /* Ensures it's at the top */
+    right: 10px; /* Aligns the hamburger icon to the top-right corner */
+}
+
 /* Neon Line Animation */
 nav.navbar::before, nav.navbar::after {
     content: "";
@@ -27,11 +34,6 @@ nav.navbar::before, nav.navbar::after {
     background: #ff7628;
     animation: animateLine 3s linear infinite;
 }
-
-body {
-    background-color: #f4f4f4;
-}
-
 
 nav.navbar::before {
     top: 0;
@@ -61,39 +63,3 @@ nav.navbar::after {
 .nav-link:hover {
     color: #ff7628 !important;
 }
-
-/* Styles for Payment Form (not part of the navbar) */
-.payment-container {
-    background: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 300px;
-    text-align: center;
-}
-
-h2 {
-    color: #333;
-}
-
-label {
-    display: block;
-    margin: 10px 0 5px;
-}
-
-input, button {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-button {
-    background: #007bff;
-    color: white;
-    border: none;
-    cursor: pointer;
-}
-
-
