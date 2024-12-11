@@ -89,7 +89,7 @@ nav.navbar::after {
 
 @media (max-width: 768px) {
     .loader {
-        left: 5%; /* Move the loader slightly left on smaller screens */
+        left: 10%; /* Move the loader slightly left on smaller screens */
     }
 }
 
