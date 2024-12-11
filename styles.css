@@ -28,6 +28,23 @@ nav.navbar::before, nav.navbar::after {
     animation: animateLine 3s linear infinite;
 }
 
+body {
+    background-color: #f4f4f4;
+}
+
+.navbar {
+    background-color: #004570;
+}
+
+.navbar-toggler {
+    border-color: white; /* If you want to change the color of the toggler icon */
+}
+
+.navbar-toggler-icon {
+    background-color: white; /* Change the icon color */
+}
+
+
 nav.navbar::before {
     top: 0;
     left: 0;
