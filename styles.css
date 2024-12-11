@@ -72,7 +72,7 @@ nav.navbar::after {
     background-color: #ff7628; /* Div background color */
     width: 100%; /* Full width */
     height: 40px; /* Height similar to a typical navbar */
-    top:30px;
+    top:20px;
     display: flex;
     justify-content: center; /* Center content horizontally */
     align-items: center; /* Center content vertically */
