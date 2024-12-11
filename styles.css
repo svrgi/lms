@@ -71,7 +71,7 @@ nav.navbar::after {
 .custom-navbar {
     background-color: #ff7628; /* Div background color */
     width: 100%; /* Full width */
-    height: 60px; /* Height similar to a typical navbar */
+    height: 40px; /* Height similar to a typical navbar */
     top:20px;
     display: flex;
     justify-content: center; /* Center content horizontally */
@@ -96,7 +96,7 @@ nav.navbar::after {
 
 @media (max-width: 480px) {
     .loader {
-        left: -2%; /* Further move left */
+        left: -4%; /* Further move left */
         width: 50px; /* Adjust size if needed */
         height: 50px; /* Adjust size if needed */
     }
